@@ -1,0 +1,52 @@
+html,
+body {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.item {
+  width: 150px;
+  margin: 20px;
+  border: 1px solid #f00;
+  flex: 0 0 150px;
+}
+
+.item-1 {
+  height: 120px;
+}
+
+.item-2 {
+  height: 100px;
+}
+
+.item-3 {
+  height: 40px;
+}
+
+.item-4 {
+  height: 200px;
+  border: 1px solid #00f;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .item-4 {
+    order: -1;
+  }
+}
