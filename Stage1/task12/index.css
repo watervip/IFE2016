@@ -1,0 +1,160 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sample-1,
+.sample-2,
+.sample-3 {
+  margin-top: 50px;
+}
+
+.sample-3 {
+  margin-bottom: 50px;
+}
+
+/*表格*/
+.sample-1 table {
+  font-weight: 700;
+}
+
+.sample-1 table th {
+  min-width: 100px;
+  text-align: left;
+  color: #fff;
+  background-color: #333;
+}
+
+.sample-1 table tr:nth-child(1),
+.sample-1 table tr:nth-child(2),
+.sample-1 table tr:nth-child(3) {
+  color: #f00;
+}
+
+.sample-1 table tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+
+
+/*输入框*/
+.sample-2 input {
+  width: 200px;
+  transition: width .5s ease;
+}
+
+.sample-2 input:focus {
+  width: 300px;
+}
+
+
+
+/*Banner 轮播图*/
+.sample-3 ul,
+.sample-3 li {
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+
+ul.slide-wrapper {
+  width: 300%;
+  height: 100%;
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+
+.slide li {
+  position: absolute;
+  float: left;
+  width: 300px;
+  height: 100%;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 100px;
+}
+
+/*重要：轮播图动画*/
+.slide li:target {
+  animation: scroll .5s linear;
+  z-index: 999;
+}
+
+/*重要：轮播图动画*/
+@keyframes scroll {
+  0% {
+    left: -100%;
+    z-index: 9;
+  }
+  25% {
+    left: -90%;
+    z-index: 19;
+  }
+  50% {
+    left: -70%;
+    z-index: 39;
+  }
+  75% {
+    left: -50%;
+    z-index: 69;
+  }
+  100% {
+    left: 0;
+    z-index: 89;
+  }
+}
+
+/*轮播图背景色*/
+#slide-1 {
+  background-color: #f00;
+}
+
+#slide-2 {
+  background-color: #0f0;
+}
+
+#slide-3 {
+  background-color: #00f;
+}
+
+/*轮播图控制器*/
+.slide-controll {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.slide-controll a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  color: #000;
+  text-align: center;
+  line-height: 25px;
+  text-decoration: none;
+  background-color: #ffffff;
+  opacity: 0.5;
+}
