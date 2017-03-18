@@ -1,5 +1,7 @@
 # IFE2016：百度前端技术学院 2016 年春季班 Demo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Loyalsoldier/IFE2016.svg)](https://greenkeeper.io/)
+
 参加[百度前端技术学院](http://ife.baidu.com) 2016 年春季班，练习 HTML、CSS、JavaScript 等……
 
 ## 春季班详情
